@@ -4,7 +4,7 @@ function solution(priorities, location) {
     const indexList = Array.from(priorities, (_, i) => i);
     
     while (priorities.length > 0) {
-        // 정렬될 떄 까지 여기 로직만 실행
+        // 정렬될 떄 까지만 여기 로직만 실행
         if (priorities.some((priority) => priority > priorities[0])) {
             priorities.push(priorities.shift());
             indexList.push(indexList.shift());
