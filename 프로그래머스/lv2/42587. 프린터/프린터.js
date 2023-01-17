@@ -12,14 +12,11 @@ function solution(priorities, location) {
         }
         
         answer += 1;
-        
-        console.log(indexList);
-        console.log(location);
+ 
         if (indexList[0] === location) {
             break;
         }
     
-        // 정렬 이후 여기 로직만 실행
         if (indexList[0] !== location) {
             priorities.shift();
             indexList.shift();
