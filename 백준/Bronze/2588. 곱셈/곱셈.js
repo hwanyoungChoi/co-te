@@ -2,10 +2,13 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./test.txt";
 const input = fs.readFileSync(filePath).toString().trim().split("\n");
 
-const [N1, N2] = input;
+const numbers = input;
 
-for (let i = N2.length - 1; i >= 0; i--) {
-  console.log(Number(N1) * Number(N2.slice(i, i + 1)));
+for (let i = 2; i >= 0; i--) {
+  const num1 = Number(numbers[0]);
+  const target = Number(numbers[1][i]);
+
+  console.log(num1 * target);
 }
 
-console.log(Number(N1) * Number(N2));
+console.log(Number(numbers[0]) * Number(numbers[1]));
